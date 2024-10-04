@@ -8,6 +8,8 @@ print (9 * 2)
 print(18 / 2)
 #Resto
 print( 9 % 2)
+# Potencia
+print(4**2)
 
 numero = 7
 numero += 2
