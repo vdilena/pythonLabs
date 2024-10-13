@@ -79,5 +79,6 @@ listaConSumaCinco = map(lambda x: x + 5, numeros)
 paisesDeEuropa = ['Italia', 'Suiza', 'Portugal', 'Suecia']
 def tieneMasDeCincoCaracteres(pais):
     return len(pais) > 5
-paisesDeMasDeCincoCaracteres = filter(tieneMasDeCincoCaracteres, paisesDeEuropa)
-# print(list(paisesDeMasDeCincoCaracteres))
+tieneMasCincoCaracteres = lambda pais : len(pais) > 5
+paisesDeMasDeCincoCaracteres = filter(tieneMasCincoCaracteres, paisesDeEuropa)
+print(list(paisesDeMasDeCincoCaracteres))

@@ -13,16 +13,16 @@ print(4**2)
 
 numero = 7
 numero += 2
-print(numero)
+print("Suma: " + str(numero))
 
 numero = 8
 numero -= 2
-print(numero)
+print("Resta: " + str(numero))
 
 numero = 3
 numero *= 6
-print(numero)
+print(f'Multiplicacion: {numero}')
 
 numero = 6
 numero /= 2
-print(numero)
+print(f'Division: {numero}')
