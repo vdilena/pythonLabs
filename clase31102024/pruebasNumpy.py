@@ -1,8 +1,10 @@
-
+import numpy as np
 
 """ Lista original """
 
 # Lista de 500000 numeros aleatorios del 1 al 500
+numeros = np.random.randint(1, 501, size=500000).tolist()
+print(f"Lista original: {numeros}")
 
 # Mido el tiempo que tarda en recorrer la lista
 
