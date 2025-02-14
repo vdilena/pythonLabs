@@ -4,12 +4,7 @@ import csv
 matrizDatosUniversitarios = []
 
 # Lectura del archivo csv
-with open('datos_universitarios.csv') as archivo: # Abrimos el archivo en modo lectura
-    #csv_reader = csv.reader(archivo, delimiter=',') # Determinamos el delimitador usado en el archivo
-
-    # Comenzamos a leer cada linea
-    #for row in csv_reader:
-        #print(type(row)) 
+with open('archivo.csv') as archivo: # Abrimos el archivo csv
 
     # Guardamos los elementos en una matriz
     matrizDatosUniversitarios = list(csv.reader(archivo, delimiter=','))
