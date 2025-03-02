@@ -1,5 +1,5 @@
-import creacionDeVariables
-from funciones import mostrarNombrePaises,sumar
+import Tema2_creacionDeVariables
+from Tema16_funciones import mostrarNombrePaises,sumar
 from datetime import datetime
 from math import sqrt
 from io import open
