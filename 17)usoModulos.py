@@ -1,5 +1,10 @@
-import Tema2_creacionDeVariables
-from Tema16_funciones import mostrarNombrePaises,sumar
+# Necesario para evitar errores de deteccion de modulos
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__))) 
+
+import variables
+from funciones import mostrarNombrePaises,sumar
 from datetime import datetime
 from math import sqrt
 from io import open

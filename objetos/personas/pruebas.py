@@ -1,3 +1,4 @@
+
 #Instacia de clases
 from .Alumno import Alumno
 from .Deportista import Deportista
