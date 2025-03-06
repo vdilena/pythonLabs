@@ -1,17 +1,12 @@
-# Necesario para evitar errores de deteccion de modulos
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__))) 
-
-import variables
-from funciones import mostrarNombrePaises,sumar
+import modulos.variables
+from modulos.funciones import mostrarNombrePaises as mp,sumar as sum
 from datetime import datetime
 from math import sqrt
 from io import open
 
 # Uso de funciones de otro modulo
-mostrarNombrePaises()
-print(f'La suma es {sumar(2,5)}')
+mp()
+print(f'La suma es {sum(2,5)}')
 # Uso de modulo datetime
 print(datetime.now())
 # Uso de modulo math para obtener raiz cuadrada

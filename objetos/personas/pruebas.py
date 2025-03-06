@@ -1,9 +1,10 @@
+# Se ejecuta desde la consola con el comando py .\pruebas.py
 
 #Instacia de clases
-from .Alumno import Alumno
-from .Deportista import Deportista
-from .Empleado import Empleado
-from .Profesor import Profesor
+from alumno import Alumno
+from deportista import Deportista
+from empleado import Empleado
+from profesor import Profesor
 
 empleado = Empleado('Mariela', 'Gimenez')
 alumno = Alumno('Carolina', 'Suarez')

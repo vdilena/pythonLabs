@@ -1,4 +1,4 @@
-from Calculadora import Calculadora
+from calculadora import Calculadora
 
 #Ejecucion de metodos estaticos
 suma = Calculadora.sumar(3,5)
