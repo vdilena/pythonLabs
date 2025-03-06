@@ -1,3 +1,5 @@
+# Se ejecuta desde la consola con el comando py .\pruebas.py
+
 from calculadora import Calculadora
 
 #Ejecucion de metodos estaticos
