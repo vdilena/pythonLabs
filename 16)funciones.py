@@ -1,84 +1,89 @@
-# Funcion que muestra los paises de America (Procedimiento)
-paisesDeAmerica = list(('Argentina', 'Brasil', 'Peru', 'Chile','Uruguay'))
+# 🔧 Funciones en Python
 
-def mostrarNombrePaises():
-    for pais in paisesDeAmerica:
-        print(pais)
+# 🟢 1️⃣ Procedimiento: función sin retorno
+paises_de_america = ['Argentina', 'Brasil', 'Peru', 'Chile', 'Uruguay']
 
-# mostrarNombrePaises()
+def mostrar_nombre_paises():
+    print("🌎 Paises de América:")
+    for pais in paises_de_america:
+        print(" -", pais)
 
-# Funcion que devuelve el resultado de sumar dos numeros. Tiene un valor por default
-def sumar(a, b = 2):
+# mostrar_nombre_paises()
+
+# 🔢 2️⃣ Función con retorno y parámetro por defecto
+
+def sumar(a, b=2):
     return a + b
 
-# print(sumar(5,8))
+# print("Resultado suma:", sumar(5, 8))
+# print("Resultado suma con valor por defecto:", sumar(5))
 
-# Funcion con args
-def sumaNumeros(a, *numeros):
+# ➕ 3️⃣ Función con *args (cantidad variable de argumentos)
 
+def suma_numeros(a, *numeros):
     resultado = a
     for numero in numeros:
-        resultado +=  numero
-    
+        resultado += numero
     return resultado
-    
-# print("Resultado: " + str(sumaNumeros(5, 6, 7, 3, -1, 7, 12)))
 
-# Funcion con kwargs
-def mostrarDatosEmpleado(nombre, **datosAdicionales):
+# print("Resultado suma múltiple:", suma_numeros(5, 6, 7, 3, -1, 7, 12))
 
-    print("Nombre: " + nombre)
-    for dato in datosAdicionales:
-        print(dato + ":" + str(datosAdicionales[dato]))
+# 🧾 4️⃣ Función con **kwargs (argumentos con clave y valor)
 
-datosEmpleados = {
-    "apellido": "Perez",
-    "puesto": "Contador",
-    "edad": 39,
-    "sueldo": 900000
-}
-# mostrarDatosEmpleado("Juan",  apellido = "Perez", puesto = "Contador", edad = 39, sueldo = 900000)
+def mostrar_datos_empleado(nombre, **datos_adicionales):
+    print(f"👤 Nombre: {nombre}")
+    for clave, valor in datos_adicionales.items():
+        print(f"   ➤ {clave}: {valor}")
 
-# Decoradores
-def decoradorOperaciones(funcionRetornaOperacion):
-    def funcionEjecutoraOperacion(primerNumero, segundoNumero):
-        return funcionRetornaOperacion(primerNumero, segundoNumero)
-    return funcionEjecutoraOperacion
+# mostrar_datos_empleado("Juan", apellido="Perez", puesto="Contador", edad=39, sueldo=900000)
 
-@decoradorOperaciones
-def sumarNumeros(a,b):
-    return a+b
+# 🎀 5️⃣ Decoradores: funciones que modifican el comportamiento de otras
 
-@decoradorOperaciones
-def restarNumeros(a,b):
-    return a-b
+def decorador_operaciones(funcion_operacion):
+    def funcion_ejecutora(a, b):
+        print(f"Ejecutando operación entre {a} y {b}")
+        return funcion_operacion(a, b)
+    return funcion_ejecutora
 
-@decoradorOperaciones
-def multiplicarNumeros(a,b):
-    return a*b
+@decorador_operaciones
+def sumar_numeros(a, b):
+    return a + b
 
-@decoradorOperaciones
-def dividirNumeros(a,b):
-    return a/b
+@decorador_operaciones
+def restar_numeros(a, b):
+    return a - b
 
-""" print("Suma: " + str(sumarNumeros(6, 3)))
-print("Resta: " + str(restarNumeros(6, 3)))
-print("Multiplicacion: " + str(multiplicarNumeros(6, 3)))
-print("Division: " + str(dividirNumeros(6, 3))) """
+@decorador_operaciones
+def multiplicar_numeros(a, b):
+    return a * b
 
-# Funcion lambda
-potencia = lambda a, b : a**b
-# print("Resultado potenciacion: " + str(potencia(2,3)))
+@decorador_operaciones
+def dividir_numeros(a, b):
+    return a / b
 
-# Map
+# print("Suma:", sumar_numeros(6, 3))
+# print("Resta:", restar_numeros(6, 3))
+# print("Multiplicación:", multiplicar_numeros(6, 3))
+# print("División:", dividir_numeros(6, 3))
+
+# ⚡ 6️⃣ Función lambda (función anónima)
+
+potencia = lambda a, b: a ** b
+# print("Potenciación (2^3):", potencia(2, 3))
+
+
+# 🔁 7️⃣ Uso de map() para transformar listas
+
 numeros = [4, 1, 4, 2, 9]
-listaConSumaCinco = map(lambda x: x + 5, numeros)
-# print(list(listaConSumaCinco))
+lista_con_suma_cinco = map(lambda x: x + 5, numeros)
+# print("Lista con +5 a cada número:", list(lista_con_suma_cinco))
 
-# Filter
-paisesDeEuropa = ['Italia', 'Suiza', 'Portugal', 'Suecia']
-def tieneMasDeCincoCaracteres(pais):
-    return len(pais) > 5
-tieneMasCincoCaracteres = lambda pais : len(pais) > 5
-paisesDeMasDeCincoCaracteres = filter(tieneMasCincoCaracteres, paisesDeEuropa)
-print(list(paisesDeMasDeCincoCaracteres))
+# 🚦 8️⃣ Uso de filter() para filtrar listas
+
+paises_de_europa = ['Italia', 'Suiza', 'Portugal', 'Suecia']
+tiene_mas_de_cinco_caracteres = lambda pais: len(pais) > 5
+
+paises_filtrados = filter(tiene_mas_de_cinco_caracteres, paises_de_europa)
+print("Paises con más de 5 caracteres:", list(paises_filtrados))
+
+

@@ -1,16 +1,28 @@
-# Imprimo por pantalla con f-string de variables sueltas
+# 🖨️ Impresión por pantalla con f-strings
+
+# 🔤 1️⃣ F-string con variables sueltas
+
+# Definición de variables individuales
 nombre = 'Carolina'
 apellido = 'Gomez'
 edad = 29
-print(f'Nombre {nombre}, Apellido: {apellido}, Edad: {edad}')
 
-# Imprimo por pantalla con f-string de un diccionario
-empleado = dict([
-    ("nombre", "Carolina"),
-    ("apellido", "Gomez"),
-    ("edad", 37),
-    ("jefe", True)
-])
+# Impresión usando f-string (forma moderna y clara)
+print("### Datos personales con variables sueltas ###")
+print(f"👤 Nombre: {nombre}, Apellido: {apellido}, Edad: {edad}")
 
-for key,value in empleado.items():
-    print(f"{key} : {value}")
+# 📋 2️⃣ F-string con datos desde un diccionario
+
+# Definición de un diccionario con datos de un empleado
+empleado = {
+    "nombre": "Carolina",
+    "apellido": "Gomez",
+    "edad": 37,
+    "jefe": True
+}
+
+# Impresión de cada clave y valor usando f-string
+print("\n### Datos del diccionario 'empleado' ###")
+for clave, valor in empleado.items():
+    print(f"🔹 {clave.capitalize()}: {valor}")
+

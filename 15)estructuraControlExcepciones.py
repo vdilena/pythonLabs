@@ -1,25 +1,43 @@
-primerNumero = 2
-segundoNumero = 0
+# 🛠️ Manejo de Excepciones en Python (try, except, raise)
+
+# ⚠️ 1️⃣ División por cero (excepción general)
+primer_numero = 2
+segundo_numero = 0
+
+print("### División por cero con except general ###")
 
 try:
-    print(primerNumero / segundoNumero)
+    print(primer_numero / segundo_numero)
 except:
-    print("No se puede devidir por cero!")
+    print("❌ No se puede dividir por cero (except genérico)")
 
+# 🎯 2️⃣ Captura de errores específicos (ZeroDivisionError, TypeError)
 
-primerNumero = 'Hola'
-segundoNumero = 4
+primer_numero = 'Hola'
+segundo_numero = 4
+
+print("\n### Captura de errores específicos ###")
+
 try:
-    print(primerNumero / segundoNumero)
+    print(primer_numero / segundo_numero)  # Esto lanza TypeError
 except ZeroDivisionError:
-    print("No se puede devidir por cero!")
+    print("❌ No se puede dividir por cero")
 except TypeError:
-    print("No se puede hacer operaciones entre numeros y letras")
+    print("❌ No se pueden hacer operaciones entre números y letras")
 else:
-    print("Fin de ejecucion de bloque try/except")
+    print("✅ Fin de ejecución sin errores")
 
-primerPalabra = "Hola"
-segundaPalabra = " Mundo"
+# 🚨 3️⃣ Lanzar errores manualmente con raise
 
-if len(primerPalabra) + len(segundaPalabra) > 6:
-    raise NameError('Las palabras concatenadas no pueden tener mas de 6 letras')
+primer_palabra = "Hola"
+segunda_palabra = " Mundo"
+
+print("\n### Uso de raise para lanzar una excepción personalizada ###")
+
+# Validamos la longitud total
+longitud_total = len(primer_palabra) + len(segunda_palabra)
+
+if longitud_total > 6:
+    raise NameError("❗ Las palabras concatenadas no pueden tener más de 6 letras")
+
+

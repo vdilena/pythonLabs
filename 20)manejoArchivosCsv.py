@@ -1,19 +1,24 @@
+# 📄 Lectura de archivos CSV en Python
+
 import csv
 
-# Creamos una matriz para almacenar las filas y columnas
-matrizUsuarios = []
+# 📌 Creamos una matriz para almacenar las filas y columnas
+matriz_usuarios = []
 
-# Leemos archivo csv
-with open('usuarios.csv') as archivo: # Abrimos el archivo en modo lectura
-    """ csv_reader = csv.reader(archivo, delimiter=';') # Determinamos el delimitador usado en el archivo
+# 📥 Leemos archivo CSV
+with open('usuarios.csv', mode='r') as archivo:
+    lector_csv = csv.reader(archivo, delimiter=';')  # Usamos punto y coma como separador
+    matriz_usuarios = list(lector_csv)  # Convertimos el objeto en una lista de listas
 
-    # Comenzamos a leer cada linea
-    for row in csv_reader:
-        print(row) """
+# ✅ Mostramos el contenido almacenado
+print("### 👥 Matriz de usuarios almacenada desde el archivo CSV ###\n")
 
-    # Guardamos los elementos en una matriz
-    matrizUsuarios = list(csv.reader(archivo, delimiter=';'))
+for fila in matriz_usuarios:
+    print(" ➤", fila)
 
-# Recorremos la matriz
-print("Matriz de usuario almacenada")
-print(matrizUsuarios)
+# Explicaciones
+
+#  csv.reader()	Permite leer un archivo CSV línea por línea.
+# delimiter=';'	Especifica el separador de columnas (usualmente ; o ,).
+# list(reader)	Convierte el lector en una lista de listas (filas y columnas).
+# with open(...) Abre el archivo y se asegura de que se cierre correctamente.
