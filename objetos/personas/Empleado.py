@@ -1,5 +1,5 @@
 #Clase concreta(recibe por parametro la clase de la que extiende)
-from persona import Persona
+from objetos.personas.Persona import Persona
 from objetos.interfaces.Aportante import Aportante
 
 

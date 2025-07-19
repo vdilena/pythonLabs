@@ -1,4 +1,4 @@
-from objetos.personas.persona import Persona
+from objetos.personas.Persona import Persona
 from objetos.interfaces.Aprendiz import Aprendiz
 
 

@@ -1,11 +1,12 @@
 # Se ejecuta desde la consola con el comando py .\pruebas.py
 
-#Instacia de clases
-from alumno import Alumno
-from deportista import Deportista
-from empleado import Empleado
-from profesor import Profesor
+from objetos.personas.Alumno import Alumno
+from objetos.personas.Deportista import Deportista
+from objetos.personas.Empleado import Empleado
+from objetos.personas.Profesor import Profesor
 
+
+#Instacia de clases
 empleado = Empleado('Mariela', 'Gimenez')
 alumno = Alumno('Carolina', 'Suarez')
 profesor = Profesor('Juan', 'Perez')
