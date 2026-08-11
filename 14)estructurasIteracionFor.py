@@ -50,3 +50,54 @@ print("\n### Extra: Uso de enumerate() con lista ###")
 
 for indice, pais in enumerate(paises_de_america):
     print(f"{indice + 1}. {pais}")
+
+## Uso de list comprehension ##
+
+# Ejemplo 1
+# En lugar de hacer lo siguiente:
+numeros = [1, 2, 3, 4, 5]
+dobles = []
+
+for numero in numeros:
+    dobles.append(numero * 2)
+
+# Se puede hacer con list comprehension:
+dobles = [numero * 2 for numero in numeros]
+
+# Ejemplo 2
+# En lugar de hacer lo siguiente:
+numeros = [1, 2, 3, 4, 5, 6]
+pares = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        pares.append(numero)
+
+# Se puede hacer con list comprehension:
+pares = [numero for numero in numeros if numero % 2 == 0]
+
+# Ejemplo 3
+# En lugar de hacer lo siguiente:  
+numeros = [1, 2, 3, 4, 5, 6]
+cuadradosPares = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        cuadradosPares.append(numero ** 2)
+
+# Se puede hacer con list comprehension:
+cuadradosPares = [numero ** 2 for numero in numeros if numero % 2 == 0]
+
+# Ejemplo 4
+
+def calcularIva(precio):
+    return precio * 1.21
+# En lugar de hacer lo siguiente:  
+precios = [100, 200, 300]
+preciosConIva = []
+
+for precio in precios:
+    preciosConIva.append(calcularIva(precio))
+
+# Se puede hacer con list comprehension:
+preciosConIva = [calcularIva(precio) for precio in precios]
