@@ -10,6 +10,7 @@ from modulos.funciones import mostrarNombrePaises as mp, sumar as sum
 from datetime import datetime      # Para obtener la fecha y hora actual
 from math import sqrt              # Para operaciones matemáticas como raíz cuadrada
 from io import open                # Para manipular archivos de texto
+import random
 
 # 🧪 Uso de funciones desde módulos propios
 
@@ -44,4 +45,19 @@ archivo.write("Este va a ser el texto del archivo ahora")
 archivo.close()
 print("✅ Archivo actualizado con nuevo contenido.")
 
+# Uso del módulo random
+print("\n### 🎲 Generación de números aleatorios con random ###")
+
+# Generamos un número aleatorio entre 1 y 10
+numero_aleatorio = random.randint(1, 10)
+print(f"Número aleatorio entre 1 y 10: {numero_aleatorio}")
+
+# Datos random de listas
+paises = ["España", "México", "Argentina", "Colombia", "Chile"]
+
+pais_aleatorio = random.choice(paises)
+print(f"País aleatorio de la lista: {pais_aleatorio}") 
+
+sample_paises = random.sample(paises, 3)
+print(f"Selección aleatoria de 3 países: {sample_paises}")
 
