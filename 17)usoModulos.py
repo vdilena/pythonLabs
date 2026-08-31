@@ -10,7 +10,8 @@ from modulos.funciones import mostrarNombrePaises as mp, sumar as sum
 from datetime import datetime      # Para obtener la fecha y hora actual
 from math import sqrt              # Para operaciones matemáticas como raíz cuadrada
 from io import open                # Para manipular archivos de texto
-import random
+import random                      # Para generar numeros random
+import requests                    # Para hacer solicitudes HTTP
 
 # 🧪 Uso de funciones desde módulos propios
 
@@ -61,3 +62,9 @@ print(f"País aleatorio de la lista: {pais_aleatorio}")
 sample_paises = random.sample(paises, 3)
 print(f"Selección aleatoria de 3 países: {sample_paises}")
 
+# Obtengo datos de una REST API
+respuesta = requests.get("https://jsonplaceholder.typicode.com/users")
+datos = respuesta.json()
+
+for usuario in datos:
+    print(f'Nombre del usuario: {usuario["name"]}')
